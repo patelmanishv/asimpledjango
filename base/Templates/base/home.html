@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>
+    <center>
+        Welcome to Home
+    </center>
+</h1>
+
+<form style="background-color: darksalmon;">
+    <fieldset align="center">
+    <label> Search Movie Name: </label><br>
+    <input type="text" name="title"><br><br>
+    <label> Search Year: </label><br>
+    <input type="text" name="year"><br><br>
+    <label> Search Director: </label><br>
+    <input type="text" name="director"><br><br>
+    <button type="submit"> Submit </button>
+    </fieldset>
+</form>
+{% for movie in movies %}
+<h3>  {{movie.title}}</h3>
+<h3> {{movie.description}} </h3>
+<h3>  {{movie.year}}</h3>
+
+
+{% endfor %}
+{% endblock %}
